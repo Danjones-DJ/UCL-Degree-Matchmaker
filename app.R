@@ -32,7 +32,7 @@ options(scipen = 999)
 if (exists("UCL.v2")) {
   df <- UCL.v2
 } else {
-  df <- read_csv("data/UCL_v2.csv", show_col_types = FALSE)
+  df <- read_rds("data/UCL_v2.rds", show_col_types = FALSE)
 }
 
 df <- df %>% mutate(.row_id = row_number())
