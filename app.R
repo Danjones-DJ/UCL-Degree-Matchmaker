@@ -29,11 +29,7 @@ pacman::p_load(tidyverse, shiny, bslib, scales, htmltools)
 options(scipen = 999)
 
 # Data ------------------------------------------------------------------------
-if (exists("UCL.v2")) {
-  df <- UCL.v2
-} else {
-  df <- read_rds("data/UCL_v2.rds")
-}
+df = read_rds("data/UCL.v2.rds")
 
 df <- df %>% mutate(.row_id = row_number())
 
